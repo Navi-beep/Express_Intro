@@ -9,9 +9,31 @@ app.get('/', (req, res) => {
     res.render('index');
 })
 
+let users = [
+    {
+        id:1,
+        username: 'Peanut',
+        age: 3
 
-app.get('/abc', (req, res) =>{
-    res.send('ABC!')
+    }, 
+    {
+        id:2,
+        username: 'Elise',
+        age: 33
+
+    },
+    {
+        id:3,
+        username: 'Jeff',
+        age: 33
+
+    },
+
+]
+
+
+app.get('/users', (req, res) =>{
+    res.render('users', { users })
 })
 
 
