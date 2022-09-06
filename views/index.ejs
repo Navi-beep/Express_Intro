@@ -8,5 +8,10 @@
 </head>
 <body>
     <h2>Hello this is the index</h2>
+    <% if (locals.firstName) { %>
+    <h4>Welcome <%= locals.firstName %></h4>
+    <% } else { %>
+       <h4>Welcome, please sign up</h4>
+    <% } %>
 </body>
 </html>
